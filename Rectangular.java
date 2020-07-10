@@ -25,4 +25,9 @@ public class Rectangular extends Shape {
     void GetChild(Shape a) {
 
     }
+
+    @Override
+    void in() {
+        System.out.print("Rectangular :         chieu dai: "+x+" ,chieu rong: "+y+", chieu cao: "+z);
+    }
 }

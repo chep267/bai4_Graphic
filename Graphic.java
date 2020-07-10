@@ -1,6 +1,7 @@
 package bai4;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Graphic extends Shape{
     int n; //so ptu
@@ -15,6 +16,7 @@ public class Graphic extends Shape{
 
     @Override
     void Add(Shape a) {
+        ds.add(a);
     }
 
     @Override
@@ -25,5 +27,13 @@ public class Graphic extends Shape{
     @Override
     void GetChild(Shape a) {
 
+    }
+
+    @Override
+    void in() {
+        for(Shape a: ds){
+            a.in();
+            System.out.print("\n");
+        }
     }
 }

@@ -29,6 +29,11 @@ class Point extends Shape {
         System.out.print("\nNo children...");
     }
 
+    @Override
+    void in() {
+        System.out.print("Point: ("+x+","+y+") ");
+    }
+
     double getX() {
         return x;
     }

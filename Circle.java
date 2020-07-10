@@ -28,4 +28,11 @@ public class Circle extends Shape{
 
     }
 
+    @Override
+    void in() {
+        System.out.print("Circle:           tam: ");
+        I.in();
+        System.out.print(" , ban kinh "+r);
+    }
+
 }

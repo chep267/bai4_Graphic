@@ -28,6 +28,12 @@ public class Line extends Shape {
 
     }
 
+    @Override
+    void in() {
+        System.out.print("Line:         ");
+        p1.in(); p2.in();
+    }
+
     Point getDiem1(){
         return p1;
     }
