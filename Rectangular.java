@@ -30,4 +30,9 @@ public class Rectangular extends Shape {
     void in() {
         System.out.print("Rectangular :         chieu dai: "+x+" ,chieu rong: "+y+", chieu cao: "+z);
     }
+
+    Shape CopyConstructor(){
+        Shape a = new Rectangular();
+        return a;
+    }
 }

@@ -8,6 +8,7 @@ public abstract class Shape {
     abstract void Remove(Shape a);
     abstract void GetChild(Shape a);
     abstract void in();
+    abstract Shape CopyConstructor();
 
 }
 

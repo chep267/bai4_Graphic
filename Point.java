@@ -34,6 +34,11 @@ class Point extends Shape {
         System.out.print("Point: ("+x+","+y+") ");
     }
 
+    Shape CopyConstructor(){
+        Shape a = new Point();
+        return a;
+    }
+
     double getX() {
         return x;
     }

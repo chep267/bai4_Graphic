@@ -35,4 +35,9 @@ public class Circle extends Shape{
         System.out.print(" , ban kinh "+r);
     }
 
+    Shape CopyConstructor(){
+        Shape a = new Circle();
+        return a;
+    }
+
 }

@@ -8,30 +8,28 @@ public class Line extends Shape {
         p2 = b;
     }
 
-    @Override
     void Operation() {
         System.out.print("\nLine Operation!");
     }
 
-    @Override
     void Add(Shape a) {
 
     }
 
-    @Override
     void Remove(Shape a) {
         a = null;
     }
-
-    @Override
     void GetChild(Shape a) {
 
     }
 
-    @Override
     void in() {
         System.out.print("Line:         ");
         p1.in(); p2.in();
+    }
+    Shape CopyConstructor(){
+        Shape a = new Line();
+        return a;
     }
 
     Point getDiem1(){
