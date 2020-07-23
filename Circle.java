@@ -1,13 +1,18 @@
 package bai4;
 
-public class Circle extends Shape{
+public class Circle extends Shape {
+    
     Point I; //Tam
     double r; //ban kinh
-    Circle(){}
-    Circle(Point i, double d){
+    
+    Circle() {}
+    
+    Circle(Point i, double d) {
         I = i;
         r = d;
     }
+    
+    
     @Override
     void Operation() {
         System.out.print("\nCircle Operation!");
@@ -35,7 +40,8 @@ public class Circle extends Shape{
         System.out.print(" , ban kinh "+r);
     }
 
-    Shape CopyConstructor(){
+    //copy ham tao
+    Shape CopyConstructor() {
         Shape a = new Circle();
         return a;
     }
