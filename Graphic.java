@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Graphic extends Shape{
-    int n; //so ptu
+
     ArrayList<Shape> ds = new ArrayList<Shape>(); //danh sach
 
 
@@ -21,12 +21,18 @@ public class Graphic extends Shape{
 
     @Override
     void Remove(Shape a) {
-        a = null;
+        ds.remove(a);
     }
 
     @Override
     void GetChild(Shape a) {
 
+        if ( (a.ten()=="dothi") ) {
+            System.out.print("\nNo child!");
+        }
+        else {
+            System.out.print("\nGet child!");
+        }
     }
 
     @Override
@@ -39,6 +45,19 @@ public class Graphic extends Shape{
     Shape CopyConstructor(){
         Shape a = new Graphic();
         return a;
+    }
+
+    @Override
+    Shape Clone() {
+
+        Graphic g2 = new Graphic();
+        g2.ds.addAll(ds);
+        return g2;
+    }
+
+    @Override
+    String ten() {
+        return "dothi";
     }
 
     void themhinh() {

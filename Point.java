@@ -1,8 +1,11 @@
 package bai4;
 
 class Point extends Shape {
+
     double x,y; //Hoanh do, tung do
+
     Point(){}
+
     Point(double d1, double d2){
         x = d1;
         y = d2;
@@ -21,7 +24,7 @@ class Point extends Shape {
 
     @Override
     void Remove(Shape a) {
-        a = null;
+
     }
 
     @Override
@@ -39,10 +42,22 @@ class Point extends Shape {
         return a;
     }
 
-    double getX() {
+    @Override
+    Shape Clone() {
+        Point p2 = new Point(x,y);
+        return p2;
+    }
+
+    @Override
+    String ten() {
+        return "point";
+    }
+
+    //get, set:
+    double getHoanhdo() {
         return x;
     }
-    double getY() {
+    double getTungo() {
         return y;
     }
 

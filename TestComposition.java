@@ -1,9 +1,9 @@
 package bai4;
 
-import java.util.Scanner;
-
 public class TestComposition {
+
     public static void main(String[] args) {
+
         Graphic gr = new Graphic();
 
         gr.Operation();

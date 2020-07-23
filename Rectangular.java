@@ -23,7 +23,12 @@ public class Rectangular extends Shape {
 
     @Override
     void GetChild(Shape a) {
-
+        if ( (a.ten()=="point") || (a.ten()=="line") ){
+            System.out.print("\nGet child!");
+        }
+        else {
+            System.out.print("\nNo child!");
+        }
     }
 
     @Override
@@ -31,8 +36,20 @@ public class Rectangular extends Shape {
         System.out.print("Rectangular :         chieu dai: "+x+" ,chieu rong: "+y+", chieu cao: "+z);
     }
 
+
     Shape CopyConstructor(){
         Shape a = new Rectangular();
         return a;
+    }
+
+    @Override
+    Shape Clone() {
+        Rectangular r2 = new Rectangular(x,y,z);
+        return r2;
+    }
+
+    @Override
+    String ten() {
+        return "tamgiac";
     }
 }
