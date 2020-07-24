@@ -1,4 +1,4 @@
-package bai4;
+package dongcode.bai4;
 
 public abstract class Shape {
 

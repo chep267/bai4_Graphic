@@ -1,4 +1,4 @@
-package bai4;
+package dongcode.bai4;
 
 public class Circle extends Shape{
 
@@ -14,7 +14,7 @@ public class Circle extends Shape{
 
     @Override
     void Operation() {
-        System.out.print("\nCircle Operation!");
+        System.out.println("Circle Operation!");
     }
 
     @Override
@@ -29,11 +29,11 @@ public class Circle extends Shape{
 
     @Override
     void GetChild(Shape a) {
-        if ( (a.ten()=="point") || (a.ten()=="line") ){
-            System.out.print("\nGet child!");
+        if ( (a.ten().equals("point")) || (a.ten().equals("line")) ){
+            System.out.println("Get child!");
         }
         else {
-            System.out.print("\nNo child!");
+            System.out.println("No child!");
         }
     }
 
@@ -41,10 +41,10 @@ public class Circle extends Shape{
     void in() {
         System.out.print("Circle:           tam: ");
         tam.in();
-        System.out.print(" , ban kinh "+r);
+        System.out.print(" , ban kinh " + r);
     }
 
-    Shape CopyConstructor(){
+    Shape CopyConstructor() {
         Shape a = new Circle();
         return a;
     }

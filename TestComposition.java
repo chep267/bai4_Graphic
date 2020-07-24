@@ -1,4 +1,4 @@
-package bai4;
+package dongcode.bai4;
 
 public class TestComposition {
 
@@ -13,13 +13,14 @@ public class TestComposition {
         gr.ds.add(new Circle(new Point(0,1),5));
         gr.ds.add(new Rectangular(3,4,5));
 
-        for(Shape a : gr.ds){
-            a.Operation();
-        }
+        for
+            (Shape a : gr.ds){
+                a.Operation();
+            }
 
         gr.themhinh();
 
-        System.out.print("\ndanh sach cac hinh trong graphic:\n");
+        System.out.println("danh sach cac hinh trong graphic:\n");
         gr.in();
 
     }

@@ -1,15 +1,18 @@
-package bai4;
+package dongcode.bai4;
 
 public class Line extends Shape {
+
     Point p1, p2; //2 diem
-    Line(){}
+
+    Line() {}
+
     Line(Point a, Point b){
         p1 = a;
         p2 = b;
     }
 
     void Operation() {
-        System.out.print("\nLine Operation!");
+        System.out.println("Line Operation!");
     }
 
     void Add(Shape a) {
@@ -20,11 +23,11 @@ public class Line extends Shape {
     }
 
     void GetChild(Shape a) {
-        if( a.ten()=="point " ) {
-            System.out.print("\nGet child!");
+        if( a.ten().equals("point ") ) {
+            System.out.println("Get child!");
         }
         else {
-            System.out.print("\nNo child!");
+            System.out.println("No child!");
         }
     }
 
@@ -34,7 +37,7 @@ public class Line extends Shape {
     }
 
 
-    Shape CopyConstructor(){
+    Shape CopyConstructor() {
         Shape a = new Line();
         return a;
     }

@@ -1,4 +1,4 @@
-package bai4;
+package dongcode.bai4;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -11,7 +11,7 @@ public class Graphic extends Shape{
 
     @Override
     void Operation() {
-        System.out.print("\nGraphic Operation!");
+        System.out.println("Graphic Operation!");
     }
 
     @Override
@@ -27,22 +27,23 @@ public class Graphic extends Shape{
     @Override
     void GetChild(Shape a) {
 
-        if ( (a.ten()=="dothi") ) {
-            System.out.print("\nNo child!");
+        if ( (a.ten().equals("dothi")) ) {
+            System.out.println("No child!");
         }
         else {
-            System.out.print("\nGet child!");
+            System.out.println("Get child!");
         }
     }
 
     @Override
     void in() {
-        for(Shape a: ds){
-            a.in();
-            System.out.print("\n");
-        }
+        for
+            (Shape a: ds){
+                a.in();
+                System.out.println();
+            }
     }
-    Shape CopyConstructor(){
+    Shape CopyConstructor() {
         Shape a = new Graphic();
         return a;
     }
@@ -62,19 +63,19 @@ public class Graphic extends Shape{
 
     void themhinh() {
         Shape a = null;
-        System.out.print("\nBan muon them gi?");
-        System.out.print("\n\t1.Point   2.Line   3.Circle   4.Rectangular\n");
+        System.out.println("Ban muon them gi?");
+        System.out.println("\t1.Point   2.Line   3.Circle   4.Rectangular\n");
         int chon;
         do{
             chon = new Scanner(System.in).nextInt();
-            if(chon<1 || chon>4){
-                System.out.print("\nChon tu 1-4. Hay chon lai!    ");
+            if( (chon<1) || (chon>4) ) {
+                System.out.println("Chon tu 1-4. Hay chon lai!    ");
             }
-        }while (chon<1 || chon>4);
-        switch (chon){
+        }while ( (chon<1) || (chon>4) );
+        switch ( chon ) {
             case 1: a = new Point(1,1); break;
             case 2: a = new Line(new Point(1,1),new Point(3,2)); break;
-            case 3: a = new Circle(new Point(0,0),5);
+            case 3: a = new Circle(new Point(0,0),5); break;
             case 4: a = new Rectangular(3,4,5);
         }
         Add(a);

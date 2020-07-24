@@ -1,15 +1,17 @@
-package bai4;
+package dongcode.bai4;
 
 public class Rectangular extends Shape {
     double x,y,z; // cdai, crong, ccao
 
-    Rectangular(){}
-    Rectangular(double a, double b, double c){
+    Rectangular() {}
+
+    Rectangular(double a, double b, double c) {
         x = a; y = b; z = c;
     }
+
     @Override
     void Operation() {
-        System.out.print("\nRectangular Operation!");
+        System.out.println("Rectangular Operation!");
     }
 
     @Override
@@ -23,28 +25,28 @@ public class Rectangular extends Shape {
 
     @Override
     void GetChild(Shape a) {
-        if ( (a.ten()=="point") || (a.ten()=="line") ){
-            System.out.print("\nGet child!");
+        if ( (a.ten().equals("point")) || (a.ten().equals("line")) ){
+            System.out.println("Get child!");
         }
         else {
-            System.out.print("\nNo child!");
+            System.out.println("No child!");
         }
     }
 
     @Override
     void in() {
-        System.out.print("Rectangular :         chieu dai: "+x+" ,chieu rong: "+y+", chieu cao: "+z);
+        System.out.println("Rectangular :         chieu dai: "+x+" ,chieu rong: "+y+", chieu cao: "+z);
     }
 
 
-    Shape CopyConstructor(){
+    Shape CopyConstructor() {
         Shape a = new Rectangular();
         return a;
     }
 
     @Override
     Shape Clone() {
-        Rectangular r2 = new Rectangular(x,y,z);
+        Rectangular r2 = new Rectangular( x,y,z );
         return r2;
     }
 

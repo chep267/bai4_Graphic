@@ -1,10 +1,10 @@
-package bai4;
+package dongcode.bai4;
 
 class Point extends Shape {
 
     double x,y; //Hoanh do, tung do
 
-    Point(){}
+    Point() {}
 
     Point(double d1, double d2){
         x = d1;
@@ -14,7 +14,7 @@ class Point extends Shape {
 
     @Override
     void Operation() {
-        System.out.print("\nPoint Operation!");
+        System.out.println("Point Operation!");
     }
 
     @Override
@@ -29,15 +29,15 @@ class Point extends Shape {
 
     @Override
     void GetChild(Shape a) {
-        System.out.print("\nNo children...");
+        System.out.println("No children...");
     }
 
     @Override
     void in() {
-        System.out.print("Point: ("+x+","+y+") ");
+        System.out.print("Point: (" + x + "," + y + ") ");
     }
 
-    Shape CopyConstructor(){
+    Shape CopyConstructor() {
         Shape a = new Point();
         return a;
     }
